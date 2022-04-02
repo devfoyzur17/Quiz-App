@@ -14,10 +14,10 @@ class Result extends StatelessWidget {
 
     if (totalScore >= 80) {
       resultText =
-          "Cogratulations .. \nYour Knowlage is high\n Your Score ${totalScore}";
+          "Cogratulations!! .. \nYour Knowlage is high\n Your Score ${totalScore}";
     } else if (totalScore >= 50) {
       resultText =
-          "Congratulation .. \nYour Knowlage is mid label \n Your Score ${totalScore}";
+          "Congratulation!! .. \nYour Knowlage is mid label \n Your Score ${totalScore}";
     } else {
       resultText =
           "Bad Luck!! .. \nYour Knowlage is very low \n Your Score ${totalScore}";
