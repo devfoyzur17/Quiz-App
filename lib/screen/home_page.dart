@@ -15,7 +15,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  var questionIndex = 0;
+  var _questionIndex = 0;
   var _totalScore = 0;
 
   var question = [
@@ -119,14 +119,14 @@ class _HomePageState extends State<HomePage> {
   void anwerQuestion(int score) {
     setState(() {
       _totalScore += score;
-      questionIndex = questionIndex + 1;
+      _questionIndex = _questionIndex + 1;
     });
   }
 
   void _resetQuize(){
     setState(() {
       
-      questionIndex = 0;
+      _questionIndex = 0;
       _totalScore = 0;
     });
   }
@@ -136,11 +136,11 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       body: Container(
         padding: EdgeInsets.all(15),
-        child: questionIndex < question.length
+        child: _questionIndex < question.length
             ? Quiz(
                 question: question,
                 anwerQuestion: anwerQuestion,
-                questionIndex: questionIndex,
+                questionIndex: _questionIndex,
               )
             : Result(_totalScore, _resetQuize),
       ),
